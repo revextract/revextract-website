@@ -1,0 +1,451 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import { BOOKING_URL, asset } from '../site';
+
+const title = 'Turn Roofing Jobs Into Sales Tools | Revextract';
+const description =
+  'Transform CRM data into hyper-local proof. Build trust, attract better leads, and shorten sales cycles with verified case studies from real roofing projects.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Turn Completed Jobs Into Your Best Sales Tool',
+  description:
+    'Transform data from your CRM and PMS into hyper-local proof that builds trust, attracts better leads, and shortens your sales cycle.',
+  url: '/',
+  inLanguage: 'en',
+  about: {
+    '@type': 'SoftwareApplication',
+    name: 'Revextract',
+    applicationCategory: 'BusinessApplication',
+    description:
+      'Revextract turns completed roofing jobs into visible proof that builds trust, differentiates your company, and strengthens your position in the market by creating verified case studies from real project data.',
+    offers: {
+      '@type': 'Offer',
+      price: '4000',
+      priceCurrency: 'USD',
+      description: '$4,000 foundation designed for long-term credibility',
+    },
+    featureList: [
+      'Automated project data extraction from CRM and PMS',
+      'Verified case studies from real jobs',
+      'Hyper-local proof with project locations',
+      'API integration with JobNimbus and AccuLynx',
+      'Long-term competitive advantage building',
+    ],
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Roofing contractors focused on long-term trust and market position',
+    },
+  },
+};
+
+const costs = [
+  {
+    label: 'Cost 1:',
+    title: 'No differentiation',
+    subtitle:
+      'When your work isn’t visible, your experience has little influence during the research phase',
+    body: [
+      'Most contractors rely on broad claims to communicate quality and experience, but without documented examples, those claims carry limited weight. When completed projects are not clearly presented, homeowners have no context for the volume, type, or consistency of your work.',
+      'As a result, your track record does not factor into their early evaluation. Even established companies can appear interchangeable with competitors offering similar services.',
+    ],
+    symptoms: [
+      ['🔤', 'Messaging focuses on general claims of expertise'],
+      ['🪞', 'Competitors look and sound similar to you'],
+      ['❓', 'Prospects ask basic credibility questions early in the conversation'],
+    ],
+  },
+  {
+    label: 'Cost 2:',
+    title: 'Price becomes the decision',
+    subtitle: 'When results are not visible, homeowners rely on price as the primary comparison.',
+    body: [
+      'When homeowners cannot see clear proof of local experience and real results, they default to the simplest comparison, which is price.',
+      'The absence of evidence makes it difficult to justify premium positioning or higher-value solutions. This puts unnecessary pressure on margins and reduces your ability to compete on trust and credibility.',
+    ],
+    symptoms: [
+      ['💲', 'Frequent requests for price matching or discounts'],
+      ['🫷', 'Pushback on premium materials or recommended scope'],
+      ['📉', 'Strong experience does not translate into higher close rates'],
+      ['🏷️', 'Projects are lost to lower-priced competitors'],
+    ],
+  },
+  {
+    label: 'Cost 3:',
+    title: 'Longer sales cycles',
+    subtitle:
+      'When trust is not established upfront, your team must build credibility from scratch on every opportunity.',
+    body: [
+      'If prospects cannot see clear evidence of your work before making contact, the burden of trust shifts entirely to the sales process. Time that should be spent discussing solutions and scope is instead spent validating experience and reliability.',
+      'This increases the number of touchpoints required to move a decision forward. Over time, the sales process becomes more labor-intensive without improving outcomes.',
+    ],
+    symptoms: [
+      ['💬', 'Multiple follow-ups required to move prospects forward'],
+      ['🗣️', 'Consultations focused heavily on credibility rather than scope'],
+      ['⌛', 'Longer decision timelines after estimates are delivered'],
+      ['😓', 'Higher effort per closed job without a corresponding increase in win rate'],
+    ],
+  },
+];
+
+const benefits = [
+  {
+    title: 'Trust Is Established Before the First Conversation',
+    body: 'Prospects see real projects completed near their home before they contact you. Credibility is established upfront, so conversations start with confidence instead of skepticism.',
+  },
+  {
+    title: 'Your Experience Becomes Visible at Scale',
+    body: 'Each completed job adds to a growing record of real work across neighborhoods and project types. Over time, your production volume becomes visible proof that competitors cannot match.',
+  },
+  {
+    title: 'Sales Cycles Become Shorter and More Efficient',
+    body: 'When prospects review relevant projects in advance, fewer credibility questions need to be answered. Your team spends less time convincing and more time closing.',
+  },
+  {
+    title: 'Local Authority Builds Over Time',
+    body: 'Each project is tied to a specific service and location, strengthening your relevance for local search and AI-driven results. As your library grows, your company becomes the most visible and trusted option for homeowners researching roofing in your area.',
+  },
+];
+
+const steps = [
+  {
+    icon: '🔎',
+    title: 'Step 1: We identify the right projects',
+    body: 'We review your completed jobs and select high-value projects that help you achieve your goals.',
+  },
+  {
+    icon: '📝',
+    title: 'Step 2: We turn them into verified case studies',
+    body: 'Your job details are compiled, written, and audited into clear, hyper-local proof built from real project data.',
+  },
+  {
+    icon: '✅',
+    title: 'Step 3: You approve and publish',
+    body: 'You give quick approval while we handle the production, and your library of case studies grows over time.',
+  },
+];
+---
+
+<Layout title={title} description={description} jsonLd={jsonLd}>
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="section">
+      <div class="padding-global padding-section-nav">
+        <div class="container-large">
+          <div class="hero_component">
+            <div class="hero_top">
+              <h1 class="heading-style-h1">
+                Turn Completed Jobs Into Your <span class="text-effect-highlight">Best Sales Tool</span>
+              </h1>
+            </div>
+            <div class="hero_middle">
+              <p class="text-size-medium">
+                Transform data from your CRM and PMS into hyper-local proof that builds trust, attracts better leads, and
+                shortens your sales cycle.
+              </p>
+              <div class="spacer-medium"></div>
+              <div class="button-group align-center">
+                <a href={BOOKING_URL} target="_blank" rel="noopener" class="button">Book a Discovery Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01: The problem -->
+    <section class="section">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="text-eyebrow">01</div>
+            <div class="split_content">
+              <div>
+                <div class="split_content-top">
+                  <h2 class="heading-style-h2">
+                    Your roofing company is doing <span class="text-effect-highlight">great</span> work.
+                  </h2>
+                  <div class="spacer-small"></div>
+                </div>
+                <p class="heading-style-h4">But very little of it is ever seen by future customers.</p>
+              </div>
+              <div>
+                <p class="text-size-medium">
+                  Most roofing companies talk about quality, experience, and reliability, and in many cases, those claims
+                  are true. Crews are completing strong work every day and delivering results homeowners are happy with.
+                  <br /><br />
+                  The problem is that the work is rarely documented or shown in a way future customers can see. When
+                  homeowners research your company, they find claims instead of proof, making even experienced contractors
+                  look no different from competitors saying the same things.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: Costs -->
+    <section>
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="costs_section">
+              <div class="text-align-center">
+                <div class="max-width-large align-center">
+                  <div class="text-eyebrow">02</div>
+                  <h2 class="heading-style-h2">The <span class="text-effect-highlight">cost</span> of invisible work</h2>
+                </div>
+              </div>
+              <div class="spacer-medium"></div>
+              <div class="costs_list">
+                {
+                  costs.map((cost) => (
+                    <div class="costs_item">
+                      <div class="costs_inner">
+                        <div>
+                          <h3 class="heading-style-h3">
+                            <span class="text-effect-highlight">{cost.label}</span> {cost.title}
+                          </h3>
+                          <div class="spacer-xsmall" />
+                          <p class="heading-style-h5 text-wrap-pretty">{cost.subtitle}</p>
+                          <div class="spacer-medium" />
+                          <p class="text-size-medium">
+                            {cost.body[0]}
+                            <br />
+                            <br />
+                            {cost.body[1]}
+                          </p>
+                        </div>
+                        <div class="costs_symptoms">
+                          <h4 class="heading-style-h4">Symptoms</h4>
+                          <div class="spacer-medium" />
+                          {cost.symptoms.map(([icon, text]) => (
+                            <div class="list-item">
+                              <div class="text-size-medium" aria-hidden="true">
+                                {icon}
+                              </div>
+                              <p class="text-size-medium">{text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+              <div class="spacer-xlarge"></div>
+              <p class="heading-style-h2 text-align-center">
+                When your experience isn’t clearly shown, your past projects <span class="text-effect-highlight"
+                  >stop working for you.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03: The solution -->
+    <section>
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="feature-card">
+              <div class="split_content">
+                <div>
+                  <div class="text-eyebrow">03</div>
+                  <h2 class="heading-style-h2">
+                    Turn your work into a <span class="text-effect-highlight is-alternate">competitive advantage</span>
+                  </h2>
+                  <div class="spacer-small"></div>
+                  <p class="heading-style-h5">
+                    Revextract turns completed jobs into visible proof that builds trust, differentiates your company, and
+                    strengthens your position in the market.
+                  </p>
+                </div>
+                <div class="align-self-end">
+                  <p class="text-size-medium">
+                    Every project your team completes contains evidence of real experience, but that value typically
+                    disappears once the job is finished. Revextract connects to your existing CRM and project systems,
+                    extracts real job data, and turns it into structured, hyper-local case studies.
+                    <br /><br />
+                    Each project shows what was installed, where the work was completed, and the context behind the job,
+                    supported by photos and documentation. Instead of relying on claims, your company builds a growing
+                    record of verified work that prospects can evaluate before they ever contact you.
+                  </p>
+                  <div class="spacer-medium"></div>
+                  <a href={BOOKING_URL} target="_blank" rel="noopener" class="button">Get Started</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: No extra work -->
+    <section class="section">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="grow_content">
+              <div class="grow_content-left">
+                <div class="text-eyebrow">04</div>
+                <h2 class="heading-style-h3">Grow <span class="text-effect-highlight">without</span> adding work to your team</h2>
+                <div class="spacer-small"></div>
+                <p class="heading-style-h5">We remove the operational burden that normally prevents companies from doing this.</p>
+              </div>
+              <div class="grow_content-right">
+                <p class="text-size-medium">
+                  Creating case studies internally requires pulling information from multiple systems, organizing photos
+                  and notes, writing content, formatting it, and preparing it for publishing. In most companies, production
+                  and sales take priority, so this work never gets done consistently.
+                  <br /><br />
+                  Revextract handles the data extraction, organization, and content creation for you, so your team stays
+                  focused on operations and revenue. The proof gets built without adding new tasks, roles, or workflow
+                  complexity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05: Benefits -->
+    <section class="section">
+      <div class="padding-global padding-section-large">
+        <div class="container-small">
+          <div class="benefits_component">
+            <div class="benefits_top">
+              <div class="text-eyebrow">05</div>
+              <h2 class="heading-style-h2">Serious benefits that <span class="text-effect-highlight">compound</span> over time</h2>
+            </div>
+            {
+              benefits.map((benefit, i) => (
+                <div class="benefits_item">
+                  <h3 class="heading-style-h4">
+                    <span class="text-effect-highlight">Benefit {i + 1}:</span> {benefit.title}
+                  </h3>
+                  <p class="text-size-medium text-wrap-pretty">{benefit.body}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06: How it works -->
+    <section>
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="mb-xxlarge">
+              <div class="max-width-large">
+                <div class="text-eyebrow mb-xsmall">06</div>
+                <h2 class="heading-style-h2 mb-small">
+                  Built from <span class="text-effect-highlight">real work</span>, not marketing claims
+                </h2>
+                <p class="text-size-medium">
+                  Revextract uses your actual project data to create verified case studies, so the proof your customers
+                  see reflects real jobs, real locations, and real results.
+                </p>
+              </div>
+            </div>
+            <div class="steps_list">
+              {
+                steps.map((step) => (
+                  <div class="steps_item">
+                    <div class="heading-style-h4 mb-small" aria-hidden="true">
+                      {step.icon}
+                    </div>
+                    <h3 class="heading-style-h4 mb-small">{step.title}</h3>
+                    <p>{step.body}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07: Who it's for -->
+    <section>
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-large">
+            <div class="feature-card">
+              <div>
+                <div class="text-eyebrow">07</div>
+                <h2 class="heading-style-h2">
+                  Revextract is for companies focused on <span class="text-effect-highlight is-alternate"
+                    >long-term trust</span
+                  > and <span class="text-effect-highlight is-alternate">market position</span>, not short-term marketing
+                  fixes.
+                </h2>
+              </div>
+              <div class="spacer-medium"></div>
+              <div class="feature-card_main">
+                <p class="text-size-medium">
+                  This service is built for contractors who consistently produce quality work and want that production to
+                  create long-term competitive advantage. This is not a quick-win tactic or short-term lead strategy, but a
+                  system for building visible proof and local authority over time. Companies that treat their reputation,
+                  experience, and project history as growth assets see the strongest results.
+                </p>
+                <div class="spacer-medium"></div>
+                <a href={BOOKING_URL} target="_blank" rel="noopener" class="button">Get Started</a>
+              </div>
+              <div class="spacer-large"></div>
+              <div class="feature-card_block">
+                <h3 class="heading-style-h6">Technical Requirements</h3>
+                <div class="spacer-xsmall"></div>
+                <p class="text-size-small">
+                  Revextract requires access to your CRM or project management system through API integration so we can
+                  retrieve completed job data, including project details, addresses, photos, and job notes. This connection
+                  allows project information to be extracted automatically without manual exports or data entry.
+                </p>
+                <div class="spacer-medium">
+                  <p class="text-eyebrow">Active Integration Partners</p>
+                </div>
+                <div class="feature-card_logos">
+                  <img src={asset('images/jobnimbus-logo.svg')} loading="lazy" alt="JobNimbus" class="logo" />
+                  <img src={asset('images/acculynx-logo.svg')} loading="lazy" alt="AccuLynx" class="logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="text-align-center">
+            <div class="max-width-large align-center">
+              <h2 class="heading-style-h3">Ready to <span class="text-effect-highlight">prove</span> your expertise?</h2>
+              <div class="spacer-medium"></div>
+              <div class="button-group align-center">
+                <a href={BOOKING_URL} target="_blank" rel="noopener" class="button">Book a Discovery Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href={BOOKING_URL} target="_blank" rel="noopener" class="footer_logo" aria-label="Book a discovery call with Revextract">
+      <img src={asset('images/logo-main.svg')} loading="lazy" alt="Revextract" class="footer_logo-image" />
+    </a>
+  </footer>
+</Layout>
